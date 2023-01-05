@@ -26,7 +26,7 @@
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
         <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
         <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
-        <dd class="dwp-key-details-bar__status_nc">IDENTITY VERIFICATION STATUS:Low confidence</dd>
+        <dd class="dwp-key-details-bar__status_nc">IDENTITY VERIFICATION STATUS: No confidence</dd>
         <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
 
     </div>
@@ -44,52 +44,49 @@
     </div>
 </dl>
 </section>
+{% endblock %}
 
-<div class="govuk-grid-row">
-<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+{% block content %}
+
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <p class="govuk-body govuk-!-font-size-48">JSAPS</p>
-      <h1 class="govuk-heading-xl">Ask a different security question from JSAPS </h1>
-<br>
+      <h1 class="govuk-heading-xl">Ask a different question<br> from JSAPS </h1>
+
       <form class="form" action="/customer-answer2" method="post">
 
-        <p class="govuk-body govuk-!-font-size-36">Did the customer answer the question correctly?</p>
+<p class="govuk-body govuk-!-font-size-36">Did the customer answer the question correctly?</p>
 
-  <div class="govuk-form-group">
+        <br>
+        <form>
 
-  {{ govukRadios({
-  idPrefix: "customer_answer2",
-  name: "customer_answer2",
-  fieldset: {
-    legend: {
-      text: "",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "Yes",
-      text: "Yes"
-    },
-    {
-      value: "No",
-      text: "No"
-    }
-  ]
-}) }}
+          {{ govukRadios({
+            idPrefix: "customer_answer2",
+            name: "customer_answer2",
+            fieldset: {
+              legend: {
+                text: "",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              }
+            ]
+          }) }}
 
 <br>
 
-<button class="govuk-button" data-module="govuk-button">Confirm and Continue</button>
-</form>
+      <button class="govuk-button" data-module="govuk-button"> Confirm and continue </button>
 
-</div>
-
-<!--<h2 class="govuk-heading-m">Now send your application</h2>
-
-<p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-        <button class="govuk-button" data-module="govuk-button">Accept and send</button> -->
+      </form>
 
     </div>
     <div class="govuk-grid-column-one-third">
@@ -103,26 +100,29 @@
       <h2 class="moj-timeline__title">Searchlight</h2>
     </div>
 
+
+
     <div class="moj-timeline__description">
   <p>cis_partners_nino</p>
-  <span class="moj-badge moj-badge--red">Unsuccessful</span>
-  
+  <span class="moj-badge moj-badge--red">UnSuccessful</span>
+    
+
 </div>
 
   </div>
-
   <div class="moj-timeline__item">
        <div class="moj-timeline__header">
       <h2 class="moj-timeline__title">JSAPS</h2>
 
     </div>
 
+
     <div class="moj-timeline__description">
   <p>esa_pay_day</p>
-  <span class="moj-badge moj-badge--red">Unsuccessful</span>
+  <span class="moj-badge moj-badge--red">UnSuccessful</span>
 </div>
-</main>
+
+
 
 
 {% endblock %}
-

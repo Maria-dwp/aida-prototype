@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css"/>
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css" />
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -25,7 +25,7 @@
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
         <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
         <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
-        <dd class="dwp-key-details-bar__status_lc">IDENTITY VERIFICATION STATUS: Low confidence</dd>
+        <dd class="dwp-key-details-bar__status_nc">Identity verification Status: No confidence</dd>
         <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
 
     </div>
@@ -43,43 +43,48 @@
     </div>
 </dl>
 </section>
+<div class="govuk-grid-row">
+</div>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <p class="govuk-body govuk-!-font-size-48">JSAPS</p>
-      <h1 class="govuk-heading-xl">Ask a different question<br> from JSAPS </h1>
+      <p class="govuk-body govuk-!-font-size-48">Claimant Confirmation
+</p>
+      <h1 class="govuk-heading-xl">Is the customer calling about their own claim?</h1>
 
-      <form class="form" action="/customer-answer_lc" method="post">
+      <form class="form" action="/customer-answer1" method="post">
 
-<p class="govuk-body govuk-!-font-size-36">Did the customer answer the question correctly?</p>
+ <!-- <p class="govuk-body govuk-!-font-size-36">Did the customer answer the question correctly?</p> --> 
 
         <br>
         <form>
 
-          {{ govukRadios({
-            idPrefix: "customer_answer_lc",
-            name: "customer_answer_lc",
-            fieldset: {
-              legend: {
-                text: "",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--l"
-              }
-            },
-            items: [
-              {
-                value: "Yes",
-                text: "Yes"
-              },
-              {
-                value: "No",
-                text: "No"
-              }
-            ]
-          }) }}
+  <div class="govuk-form-group">
+  {{ govukRadios({
+  idPrefix: "customer_answer1",
+  name: "customer_answer1",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "Yes",
+      text: "Yes"
+    },
+    {
+      value: "No",
+      text: "No"
+    }
+  ]
+}) }}
+</div>
 
 <br>
 
@@ -88,7 +93,7 @@
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
+   <!-- <div class="govuk-grid-column-one-third">
       <h1 class="govuk-heading-m">Action history</h1>
       <span class="govuk-caption-m">Recorded by <br> Automated Telephony</span>
       <p class="govuk-body govuk-!-margin-bottom-4">
@@ -103,7 +108,7 @@
 
     <div class="moj-timeline__description">
   <p>cis_partners_nino</p>
-  <span class="moj-badge moj-badge--green">Successful</span>
+  <span class="moj-badge moj-badge--red">UnSuccessful</span>
 
 </div>
 
@@ -120,6 +125,7 @@
   <span class="moj-badge moj-badge--red">UnSuccessful</span>
 </div>
 
+-->
+
+
 {% endblock %}
-
-

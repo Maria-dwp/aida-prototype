@@ -47,17 +47,12 @@
 
 {% block content %}
 
-        <main class="govuk-main-wrapper">
-          <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                  <div class="gem-c-title govuk-!-margin-top-0 govuk-!-margin-bottom-0">
-                  <span class="govuk-caption-l">Claimant Confimation</span>
-                  <h1 class="govuk-heading-l">Is the customer calling <br> about their claim?</h1>
-                        <!--<p class="gem-c-lead-paragraph"> Please ask the customer to
-                  confirm they are the account owner </p>-->
-                  </div>
-                </div>
-              </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body govuk-!-font-size-48">Claimant Confirmation
+</p>
+    <h1 class="govuk-heading-xl">Is the customer calling about their own claim?</h1>
+
               
                   <form class="form" action="/customer-answer1_1" method="post">
 
@@ -78,11 +73,11 @@
                       items: [
                         {
                           value: "Yes",
-                          text: "Yes,Customer is the claimant"
+                          text: "Yes, customer is the claimant"
                         },
                         {
                           value: "No",
-                          text: "No, Customer is calling on behalf of others"
+                          text: "No, customer is calling on behalf of others"
                         }
                       ]
                     }) }}
