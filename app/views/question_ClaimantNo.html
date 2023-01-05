@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css" />
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+    <div class="dwp-key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dd class="dwp-key-details-bar__name"> Jane Doe</dd>
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+        <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
+        <dd class="dwp-key-details-bar__status_lc">IDENTITY VERIFICATION STATUS:Low confidence</dd>
+        <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
+
+    </div>
+    <div class="dwp-key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+
+        <dt>Address:</dt>
+        <dd>14 Street address</dd>
+        <dt>Postcode:</dt>
+        <dd>L14 5GE</dd>
+        <dt>Mobile:</dt>
+        <dd>07771 900 900</dd>
+
+    </div>
+</dl>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+<main class="govuk-main-wrapper">
+<div class="gem-c-title govuk-!govuk-\!-margin-top-0 govuk-!govuk-\!-margin-bottom-0">
+          <span class="govuk-caption-l">Claimant Confimation</span>
+          <h1 class="govuk-heading-l">This service is not for <br>appointee verification.
+</h1>
+                <p class="govuk-heading"> Please follow existing guidelines for: <br>
+                  Appointee verification or alternative enquiries.</p>
+                 
+   
+                  
+            </div>
+
+          
+            <button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">
+              Exit and close
+            </button>
+</div>
+</main>
+
+
+
+
+{% endblock %}

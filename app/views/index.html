@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css" />
+<!--  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> --!>
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="proto-header">
+        
+        
+        </div>
+        <h1 class="heading-large">
+          
+          <h1 class="govuk-heading-l">Agent Led Identity and Verification App </h1>
+
+   
+  
+    <span class="govuk-caption-l">A digital capability to provide a personalised guided flow for agents to uplift customer IDV and to store successful IDV so it can be re-used for repeat customer interactions using voice print authentication. </span>    
+<br>
+<span class="govuk-caption-m">User research session</span>
+<h1 class="govuk-heading-m"> Agent Led Identity and Verification App User Journeys</h1>
+
+
+<br>
+<h2 class="govuk-heading-m">AIDA- Low confidence </h2>
+
+  <ul class="list list-bullet">
+    <li><a href="claimant_lc.html">Low confidence > IDV result: Medium Confidence & Auth for VP</a></li>
+    <li><a href="claimant_lc.html">Low confidence > IDV result: Low Confidence & Not Auth for VP (Partialy Verified)</a></li>
+    <li><a href="claimant_lc_2.html">Low confidence > IDV result: Low Confidence & Not Auth for VP (Fraud Check refer to Operational instructions)</a></li>
+
+  </ul>
+  </div>
+  <br>
+
+  <h2 class="govuk-heading-m">AIDA- No confidence </h2>
+
+  <ul class="list list-bullet">
+
+    <li><a href="claimant_nc.html">No confidence > IDV result: Medium Confidence & Not Auth for VP (Failed active history check)</a></li>
+    <li><a href="claimant_nc.html">No confidence > IDV result: No Confidence (failed both KBVs 2nd try)</a></li>
+    <li><a href="Q4-Check-Date-of-Death.html">No Confidence > IDV result: Fraud Check refer to Operational instructions</a></li>
+
+  </ul>
+ 
+  </div>
+ 
+
+
+
+  </div>
+{% endblock %}

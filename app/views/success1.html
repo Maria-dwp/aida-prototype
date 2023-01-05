@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}<div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+
+ <div class="govuk-phase-banner" style="padding-bottom:0px;">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p>
+
+      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
+        Jane Doe
+      </span>
+      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
+        QQ 12 34 56 C
+      </span>
+
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
+    <p><strong class="govuk-tag--orange">
+      LOW CONFIDENCE
+    </strong></p>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <p><span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:20px;">
+        Date of birth: 4 June 1972
+      </span></p>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:16px;">
+          Mobile: 07771 900 900
+        </span>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+  <div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    IDV completed PASSED
+  </h1>
+  <div class="govuk-panel__body">
+    Customer is fully verified<br><strong>AUTHORISED FOR VOICE PRINT</strong>
+  </div>
+</div>
+
+<div class="govuk-button-group">
+<button class="govuk-button" data-module="govuk-button">
+Save and continue
+</button>
+
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+Exit & Close
+</button>
+</div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

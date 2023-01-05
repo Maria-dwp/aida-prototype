@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+
+ <div class="govuk-phase-banner" style="padding-bottom:0px;">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p>
+
+      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
+        Jane Doe
+      </span>
+      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
+        QQ 12 34 56 C
+      </span>
+
+    </p>
+  </div>
+
+</div>
+</div>
+  </div>
+
+
+</div>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-three-quarters">
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  </div></div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<h1 class="govuk-heading-xl">IDV Result</h1>
+
+<div class="govuk-panel govuk-panel--confirmation" style="background:#4c2c92">
+  <h1 class="govuk-panel__title" style="color:#ffffff">
+    WEAK PASS
+  </h1>
+  <div class="govuk-panel__body" style="color:#ffffff">
+    Customer is part verified.<br>
+  </div>
+</div>
+
+
+
+
+<div class="govuk-panel__body">
+  <h2 class="govuk-heading-m"><strong>NOT AUTHORISED FOR VOICE PRINT</strong></h2>
+  <h2 class="govuk-heading-m">What happens next</h2>
+
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Do not action a change of circumstance, including change of contact details.</li>
+  <li>Do not disclose any personal information.</li>
+  <li>You can provide payment date & amount, and proof of benefit letters.</li>
+</ul>
+
+<button class="govuk-button" data-module="govuk-button">Exit & Close</button>
+
+</div>
+
+
+</div>
+
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+    <h2 class="govuk-heading-m" id="subsection-title">
+      IDV Summary
+    </h2>
+    <div class="govuk-inset-text">
+      <p>
+
+Question answered from Searchlight<br/>
+<strong class="govuk-tag govuk-tag--green">
+PASSED
+</strong></p>
+
+
+
+      <p>Question answered from JSAPS
+      <br/><strong class="govuk-tag--orange">
+        FAILED
+      </strong></p>
+
+
+        <p>ID at risk
+        <br/><strong class="govuk-tag--green">
+          PASSED
+        </strong></p>
+
+
+        <p>Date of death
+        <br/><strong class="govuk-tag--green">
+          NOT RECORDED
+        </strong></p>
+
+
+        <p>6 months ESA history
+        <br/><strong class="govuk-tag--green">
+          PASSED
+        </strong></p>
+
+
+    </div>
+
+  </aside>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-notification-banner"  role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+
+
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="dwp-timeline">
+<h1 class="govuk-heading-m">Questions Asked</h1>
+<ol class="dwp-timeline__events">
+<li class="dwp-timeline__events--entry">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Searchlight</h2>
+    <p class="govuk-caption-m govuk-!-margin-bottom-1">CIS Other benefits</p>
+    <p class="govuk-caption-m">
+      <strong class="govuk-tag govuk-tag--green">
+      PASSED
+    </strong>
+  </p>
+</li>
+<li class="dwp-timeline__events--entry">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-1">JSAPS</h2>
+    <p class="govuk-caption-m govuk-!-margin-bottom-1">ESA last payment date</p>
+    <p class="govuk-caption-m">
+      <strong class="govuk-tag--orange">
+      FAILED
+    </strong>
+  </p>
+</li>
+</ol>
+</div>
+
+{% endblock %}

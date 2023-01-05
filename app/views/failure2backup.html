@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+
+ <div class="govuk-phase-banner" style="padding-bottom:0px;">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p>
+
+      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
+        Jane Doe
+      </span>
+      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
+        QQ 12 34 56 C
+      </span>
+
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
+    <p><strong class="govuk-tag--red">
+      NO CONFIDENCE
+    </strong></p>
+  </div>
+</div>
+</div>
+  </div>
+
+
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-three-quarters">
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  </div></div>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<h1 class="govuk-heading-xl">IDV Result</h1>
+
+<div class="govuk-panel govuk-panel--confirmation" style="background:#d4351c">
+  <h1 class="govuk-panel__title" style="color:#ffffff">
+    FAILED
+  </h1>
+  <div class="govuk-panel__body" style="color:#ffffff">
+    Customer is not verified.<br><strong>NOT AUTHORISED FOR VOICE PRINT</strong>
+  </div>
+</div>
+
+
+
+
+<div class="govuk-panel__body">
+  <h2 class="govuk-heading-m">What happens next</h2>
+
+  <p class="govuk-body">
+    Explain to the customer that you have not been able to verify their identity and you cannot continue with the call.
+  </p>
+  <p class="govuk-body">
+    Ask the customer to call back or write in with their request.
+  </p>
+
+  <p class="govuk-body">
+    Do NOT ask the customer to register for voice ID.
+  </p>
+<button class="govuk-button" data-module="govuk-button">Exit & Close</button>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+{% endblock %}

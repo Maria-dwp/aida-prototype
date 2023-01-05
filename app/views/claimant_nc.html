@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css" />
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+    <div class="dwp-key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dd class="dwp-key-details-bar__name"> Jane Doe</dd>
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+        <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
+        <dd class="dwp-key-details-bar__status_nc">IDENTITY VERIFICATION STATUS: No confidence</dd>
+        <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
+
+    </div>
+    <div class="dwp-key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+
+        <dt>Address:</dt>
+        <dd>14 Street address</dd>
+        <dt>Postcode:</dt>
+        <dd>L14 5GE</dd>
+        <dt>Mobile:</dt>
+        <dd>07771 900 900</dd>
+
+    </div>
+</dl>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+        <main class="govuk-main-wrapper">
+          <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <div class="gem-c-title govuk-!-margin-top-0 govuk-!-margin-bottom-0">
+                  <span class="govuk-caption-l">Claimant Confimation</span>
+                  <h1 class="govuk-heading-l">Is the customer calling <br> about their claim?</h1>
+                        <!--<p class="gem-c-lead-paragraph"> Please ask the customer to
+                  confirm they are the account owner </p>-->
+                  </div>
+                </div>
+              </div>
+              
+                  <form class="form" action="/customer-answer1_1" method="post">
+
+                            <br>
+                            <form>
+                    
+                      <div class="govuk-form-group">
+                      {{ govukRadios({
+                      idPrefix: "customer_answer1_1",
+                      name: "customer_answer1_1",
+                      fieldset: {
+                        legend: {
+                          text: "",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--l"
+                        }
+                      },
+                      items: [
+                        {
+                          value: "Yes",
+                          text: "Yes,Customer is the claimant"
+                        },
+                        {
+                          value: "No",
+                          text: "No, Customer is calling on behalf of others"
+                        }
+                      ]
+                    }) }}
+                    </div>
+                    
+                          <button class="govuk-button  govuk-!-margin-top-8" data-module="govuk-button"> Confirm and continue </button>
+                          
+                          <button class="govuk-button govuk-button--secondary govuk-!-margin-top-8" data-module="govuk-button">
+                            Cancel
+                          </button>
+                          </form>
+                               
+
+
+<!--
+                  <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="close-cases1" name="close-cases" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="close-cases1">
+                            Yes, Caller is the claimant
+                          </label>
+                      </div>
+
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="close-cases2" name="close-cases" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="close-cases2">
+                              No, Caller is calling on behalf of others
+                          </label>
+                      </div>
+                  </div>
+
+
+                    <button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">
+                      Continue
+                    </button>
+
+                    <button class="govuk-button govuk-button--secondary govuk-!-margin-top-8" data-module="govuk-button">
+                      Cancel
+                    </button> -->
+        </div>
+          </div>
+
+        </main>
+    <!--</div>-->
+
+
+{% endblock %}

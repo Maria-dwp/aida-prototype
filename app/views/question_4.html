@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-notification-banner" style="margin-bottom:-25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+
+ <div class="govuk-phase-banner" style="padding-bottom:0px;">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p>
+
+      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
+        Jane Doe
+      </span>
+      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
+        QQ 12 34 56 C
+      </span>
+
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
+    <p><strong class="govuk-tag--red">
+      NO CONFIDENCE
+    </strong></p>
+  </div>
+</div>
+</div>
+  </div>
+  <!--<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <p><span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:20px;">
+        Date of birth: 4 June 1972
+      </span></p>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:16px;">
+          Mobile: 07771 900 900
+        </span>
+      </p>
+    </div>
+
+  </div> -->
+
+</div>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-three-quarters">
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  </div></div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Ask one question from Searchlight</h1>
+
+      <form class="form" action="/customer-answer4" method="post">
+
+
+        <p>Did the caller answer correctly?</p>
+
+
+  <div class="govuk-form-group">
+  {{ govukRadios({
+  idPrefix: "customer_answer4",
+  name: "customer_answer4",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "Yes",
+      text: "Yes"
+    },
+    {
+      value: "No",
+      text: "No"
+    }
+  ]
+}) }}
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Questions Asked
+        </h2>
+        <div class="govuk-inset-text">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+    Searchlight
+  </h2>
+
+  CIS Child's DOB <br/>
+  <strong class="govuk-tag--red">
+    FAILED
+  </strong>
+
+
+
+          <p>&nbsp;</p>
+
+          <h2 class="govuk-error-summary__title" id="error-summary-title">JSAPS</h2>
+          ESA claim start date<br/>
+          <strong class="govuk-tag--red">
+            FAILED
+          </strong>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

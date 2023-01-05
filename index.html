@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-notification-banner" style="margin-bottom:25px;" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+
+ <div class="govuk-phase-banner" style="padding-bottom:0px;">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p>
+
+      <span class="govuk-phase-banner__text" style="color:white;font-size:1.8em; font-weight:bold;">
+        Jane Doe
+      </span>
+      <span class="govuk-phase-banner__text" style="color:white; font-size:1.2em; padding:10px 0px 0px 10px;">
+        QQ 12 34 56 C
+      </span>
+
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-quarter" style="padding-top:10px; text-align: right;">
+    <p><strong class="govuk-tag--orange">
+      LOW CONFIDENCE
+    </strong></p>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <p><span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:20px;">
+        Date of birth: 4 June 1972
+      </span></p>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        <span class="govuk-phase-banner__text" style="color:white; font-size:1.0em; padding-left:16px;">
+          Mobile: 07771 900 900
+        </span>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!--  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> --!>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Voice Print
+
+      </h1>
+      <p>Voice print uplift app for agents</p>
+
+
+
+      <h2 class="govuk-heading-m">Use this service to: </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+        <li>do something
+<li>update your name, address or other details</li>
+<li>do something else</li>
+      </ul>
+      <p>Are you ready to start Voice print?</p>
+        <div class="govuk-button-group">
+          <a href="start.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Start now
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg></a>
+
+  <a class="govuk-link" href="#">Cancel</a>
+</div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Questions Asked
+        </h2>
+        <div class="govuk-inset-text">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+    Searchlight
+  </h2>
+    <div id="passport-issued-hint" class="govuk-hint">
+  Q1 Current Bank account no <br/>
+  <strong class="govuk-tag">
+    PASSED
+  </strong>
+</div>
+
+
+          <p>&nbsp;</p>
+
+          <h2 class="govuk-error-summary__title" id="error-summary-title">JSAPS</h2>
+          Q3 from benefit section
+          <strong class="govuk-tag--orange">
+            FAILED
+          </strong>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
