@@ -25,8 +25,8 @@
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
         <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
         <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
-        <dd class="dwp-key-details-bar__status_nc">Identity verification Status: No confidence</dd>
-        <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
+        <dd class="dwp-key-details-bar__status_lc">Identity verification Status: Low confidence</dd>
+        <dt class="govuk-visually-hidden"> ID&amp;V Status: Low confidence:</dt>
 
     </div>
     <div class="dwp-key-details-bar__bottom-block">
@@ -35,7 +35,7 @@
 
         <dt>Address:</dt>
         <dd>14 Street address</dd>
-        <dt>Post code:</dt>
+        <dt>Postcode:</dt>
         <dd>L14 5GE</dd>
         <dt>Mobile:</dt>
         <dd>07771 900 900</dd>
@@ -43,6 +43,7 @@
     </div>
 </dl>
 </section>
+
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-three-quarters">
   </div></div>
@@ -54,17 +55,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
   <!--  <h1 class="govuk-heading-xl">IDV Result</h1> -->
-  <div class="govuk-panel govuk-panel--confirmation" style="background:#d4351c">
-     
+  <div class="govuk-panel govuk-panel--confirmation" style="background:#f47738;">
 <h1 class="govuk-panel__title">
-  Fraud Checks Failed
+  Partially Verified
 </h1>
 <div class="govuk-panel__body">
-  Date of Death 
+  Low Confidence
 </div>
 </div>
-<p class="govuk-body">If the caller states they are the claimant and a date of death is recorded, you must take all the information and complete a fraud referral.
-</p>
+<!--<p class="govuk-body">Calls presented as GREEN require no further verification where
+the caller is the claimant.</p>
 
 
   <!--  <div class="govuk-inset-text">
@@ -76,36 +76,43 @@
 <br>
 
 
-    <div class="moj-banner moj-banner--warning" role="region" aria-label="Warning">
+<div class="moj-banner moj-banner--warning" role="region" aria-label="Warning">
 
   <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
     <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" />
   </svg>
-
-  <div class="moj-banner__message"> <h1 class="govuk-heading-m"style="color:#d4351c;"> Not authorised for voice print</h1></div>
-
+  
+  <div class="moj-banner__message"> Not authorised for voice print
+    <br>Customer needs at least 6 months history of receiving ESA payments to be authorised for voice print.</div>     
 </div>
+
 
 <h2 class="govuk-heading-m">What you should do next</h2>
 <div class="govuk-!-padding-bottom-3"></div>
 <ol class="govuk-list govuk-list">
-  <li>Refer to Operational Instructions for Fraud Checks. 
-</li>
-  <li>A fraud referral or CIS
-    amendment may be required.
-<li>Do not disclose any personal information.
-</li>
-
+  <li>Check current address and contact details are up to date.</li>
+  <li>Assist the customer with their enquiry.</li>
+  
 </ol>
-<div class="govuk-!-padding-bottom-3"></div>
-    <button class="govuk-button" data-module="govuk-button">Exit and Close</button>
-  </div>
+<div class="moj-button-menu">
+  <div class="moj-button-menu__wrapper">
 
+    <a href="start.html" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
+      Exit and close
+    </a>
+
+    <!--<a href="start.html" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+      Second action
+    </a>-->
+
+  </div>
+</div>
+</div>
 
 
 <div class="govuk-grid-column-one-third">
   <h1 class="govuk-heading-m">Action history</h1>
-  <span class="govuk-caption-m">Recorded  <br> </span>
+  <span class="govuk-caption-m">Recorded </span>
   <p class="govuk-body govuk-!-margin-bottom-4">
     <div class="moj-timeline">
 <div class="moj-timeline__item">
@@ -120,6 +127,7 @@
 
 
 <div class="moj-timeline__description">
+
 <span class="moj-badge moj-badge--green">Successful</span>
 
 </div>
@@ -138,7 +146,6 @@
 
 <span class="moj-badge moj-badge--green">Successful</span>
 
-
 </div>
 
 </div>
@@ -156,7 +163,7 @@
 
 <div class="moj-timeline__description">
 
-  <span class="moj-badge moj-badge--green">Successful</span>
+<span class="moj-badge moj-badge--red">UnSuccessful</span>
 
 </div>
 
@@ -171,7 +178,9 @@
 
 
 <div class="moj-timeline__description">
-<span class="moj-badge moj-badge--red">UnSuccessful</span>
+
+<span class="moj-badge moj-badge--green">Successful</span>
+
 </div>
 
 </div>
@@ -193,5 +202,7 @@ ID at risk</h2>
 
 </div>
 </div>
+
+
 
 {% endblock %}
