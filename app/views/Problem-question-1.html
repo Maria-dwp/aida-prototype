@@ -25,7 +25,7 @@
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
         <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
         <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
-        <dd class="dwp-key-details-bar__status">ID&amp;V Status:Low confidence</dd>
+        <dd class="dwp-key-details-bar__status_nc">Identity verification Status: No confidence</dd>
         <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
 
     </div>
@@ -35,7 +35,7 @@
 
         <dt>Address:</dt>
         <dd>14 Street address</dd>
-        <dt>Post code:</dt>
+        <dt>Postcode:</dt>
         <dd>L14 5GE</dd>
         <dt>Mobile:</dt>
         <dd>07771 900 900</dd>
@@ -51,20 +51,37 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-heading-xl"> Searchlight: <br>
-          Ask one security question from Searchlight</h1>
-
-        <h3 class="govuk-fieldset__heading">
-          Did the caller answer correctly?
-        </h3>
-
-        <div id="contact-hint" class="govuk-hint">
-                    Select one option.
-                  </div>
-  <div class="govuk-form-group">
-
+      <div class="gem-c-error-summary govuk-error-summary" data-module="govuk-error-summary" id="error-summary">
+        <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+          <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                  <li class="gem-c-error-summary__list-item">
+                      <a href="#response-0">Please answer this question</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      </div>
+      </div>
+                          
+      <p class="govuk-body govuk-!-font-size-48">Searchlight</p>
+      <h1 class="govuk-heading-xl">Ask a different question<br>from Searchlight </h1>
+      <form class="form" action="/customer-answer1" method="post">
+        <div class="govuk-form-group"> <fieldset class="govuk-fieldset">
+          <div class="govuk-form-group govuk-form-group--error govuk-!-margin-bottom-6">
+            <fieldset class="govuk-fieldset" aria-describedby="error-991c45b4">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  
+                  <h1 class="govuk-fieldset__heading gem-c-radio__heading-text">Did the customer answer the question correctly?</h1>
+          </legend>
+          
+               <p id="error-991c45b4" class="gem-c-error-message govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Please answer this question
+          </p>
+            <div class="govuk-radios" data-module="govuk-radios" class="govuk-form-group">
   {{ govukRadios({
   idPrefix: "customer_answer1",
   name: "customer_answer1",
@@ -87,21 +104,27 @@
   ]
 }) }}
 </div>
+
 <br>
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+</fieldset>
+<button class="govuk-button" data-module="govuk-button"> Confirm and continue </button>
+
+   
 
     </div>
     <div class="govuk-grid-column-one-third">
-      <h2 class="govuk-heading-m" id="subsection-title">Action history</h2>
-
-      <aside class="app-related-items" role="complementary">
+      <h1 class="govuk-heading-m">Action history</h1>
+      <span class="govuk-caption-m">Recorded by <br> Automated Telephony</span>
+      <p class="govuk-body govuk-!-margin-bottom-4">
         <div class="moj-timeline">
   <div class="moj-timeline__item">
 
     <div class="moj-timeline__header">
       <h2 class="moj-timeline__title">Searchlight</h2>
-
     </div>
+
+
 
     <div class="moj-timeline__description">
   <p>cis_partners_nino</p>
@@ -110,21 +133,18 @@
 </div>
 
   </div>
-
   <div class="moj-timeline__item">
        <div class="moj-timeline__header">
       <h2 class="moj-timeline__title">JSAPS</h2>
 
     </div>
 
+
     <div class="moj-timeline__description">
   <p>esa_pay_day</p>
-  <span class="moj-badge moj-badge--green">Successful</span>
-
+  <span class="moj-badge moj-badge--red">UnSuccessful</span>
 </div>
-  </div>
 
-</div>
 
 
 

@@ -147,7 +147,7 @@ console.log("passYes", passYes);
         // Check whether the variable matches a condition
         if (passYes == "Yes"){
           // Send user to next page
-          res.redirect('Q4-Check-Date-of-Death_lc')
+          res.redirect('BFC-Check-Date-of-Death_lc')
         } else if (passYes == "No") {
           // Send user to ineligible page
           res.redirect('failure_lc_pv')

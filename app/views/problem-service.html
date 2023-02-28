@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css" />
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1>
+        <div class="govuk-width-container">
+         
+                <p class="govuk-body">Try again later. We have not saved your answers. <br> When the service is available, you will have to start again.</p>
+                
+                <p class="govuk-body">Follow the standard TIDV operational guidance.</p>
+                
+                  <a class="govuk-link" href="#">Contact the ID&T Helpline</a>
+                </p>
+              </div>
+            </div>
+          </main>
+        </div>
+                  
+
+
+        
+
+
+
+{% endblock %}

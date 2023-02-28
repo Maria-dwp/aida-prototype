@@ -48,55 +48,85 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-caption-xl govuk-!-font-size-48 govuk-!-margin-bottom-4">Claimant Confirmation</h1>
-    <h2 class="govuk-heading-xl govuk-!-margin-bottom-6">Is the customer calling about their own claim?</h2>
-
-
-    <form class="form" action="/customer-answer1_2" method="post">
-
+    <div class="gem-c-error-summary govuk-error-summary" data-module="govuk-error-summary" id="error-summary">
+      <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+                <li class="gem-c-error-summary__list-item">
+                    <a href="#response-0">Please answer this question</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+        <p class="govuk-body govuk-!-font-size-48">Claimant Confirmation</p>
+        
+        
+    
+     
+    <div class="govuk-form-group"> <fieldset class="govuk-fieldset">
+    <div class="govuk-form-group govuk-form-group--error govuk-!-margin-bottom-6">
+      <fieldset class="govuk-fieldset" aria-describedby="error-991c45b4">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            
+            <h1 class="govuk-fieldset__heading gem-c-radio__heading-text"> the customer calling about their own claim?</h1>
+    </legend>
+    
+          <p id="error-991c45b4" class="gem-c-error-message govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Please answer this question
+    </p>
+     
+    
+      <div class="govuk-radios" data-module="govuk-radios">
+        
+          
               
-                  <form class="form" action="/customer-answer1_2" method="post">
-
-                            <br>
-                            <form>
-                    
-                      <div class="govuk-form-group">
-                      {{ govukRadios({
-                      idPrefix: "customer_answer1_2",
-                      name: "customer_answer1_2",
-                      fieldset: {
-                        legend: {
-                          text: "",
-                          isPageHeading: true,
-                          classes: "govuk-fieldset__legend--l"
-                        }
-                      },
-                      items: [
-                        {
-                          value: "Yes",
-                          text: "Yes, customer is the claimant"
-                        },
-                        {
-                          value: "No",
-                          text: "No, customer is calling on behalf of others"
-                        }
-                      ]
-                    }) }}
-                    </div>
-                    
-                    <div class="govuk-button-group">
-                      <button class="govuk-button govuk-!govuk-\!-margin-top-6" data-module="govuk-button">
-                        Confirm and continue
-                      </button>
-                      <button class="govuk-button govuk-button--secondary govuk-!govuk-\!-margin-top-6" data-module="govuk-button">
-                        Cancel
-                      </button>
-                    </div>
-                          </form>
-                               
-
-
+            
+            
+            
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="customer_answer1_2" name="customer_answer1_2" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="customer_answer1_2">
+            Yes, customer is the claimant
+          </label>
+              
+            </div>
+            
+            
+          
+        
+          
+            
+            
+            
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="customer_answer1_2-2" name="customer_answer1_2" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="customer_answer1_2-2">
+            No, customer is calling on behalf of others
+          </label>
+              
+            </div>
+            
+            
+          
+        
+      </div>
+      
+    
+    </fieldset>
+    
+    
+    </div>
+          
+                              <button class="govuk-button  govuk-!-margin-top-8" data-module="govuk-button"> Confirm and continue </button>
+                              
+                              <button class="govuk-button govuk-button--secondary govuk-!-margin-top-8" data-module="govuk-button">
+                                Cancel
+                              </button>
+                              </fieldset></div>
 <!--
                   <div class="govuk-radios">
                       <div class="govuk-radios__item">

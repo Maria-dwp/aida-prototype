@@ -20,24 +20,23 @@
 <dl class="dwp-key-details-bar__key-details">
     <div class="dwp-key-details-bar__top-block">
         <dt class="govuk-visually-hidden">Name:</dt>
-        <dd class="dwp-key-details-bar__name"> Jane Doe</dd>
+        <dd class="dwp-key-details-bar__name"> Unavailable</dd>
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
-        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+        <dd class="dwp-key-details-bar__nino"></dd>
         <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
-        <dd class="dwp-key-details-bar__status_lc">IDENTITY VERIFICATION STATUS:Low confidence</dd>
+        <dd class="dwp-key-details-bar__status_nc">Identity verification Status: No confidence</dd>
         <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
-
     </div>
     <div class="dwp-key-details-bar__bottom-block">
         <dt>Date of birth:</dt>
-        <dd>4 June 1972</dd>
+        <dd>Unavailable</dd>
 
         <dt>Address:</dt>
-        <dd>14 Street address</dd>
+        <dd>Unavailable</dd>
         <dt>Postcode:</dt>
-        <dd>L14 5GE</dd>
+        <dd>Unavailable</dd>
         <dt>Mobile:</dt>
-        <dd>07771 900 900</dd>
+        <dd>Unavailable</dd>
 
     </div>
 </dl>
@@ -47,11 +46,28 @@
 
 {% block content %}
 <div class="govuk-grid-row">
+  
   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+      <div role="alert">
+        <h2 class="govuk-error-summary__title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#search"> customer information is not available here.<br> 
 
-    <h1 class="govuk-caption-xl govuk-!-font-size-48 govuk-!-margin-bottom-4">Claimant Confirmation</h1>
-    <h2 class="govuk-heading-xl govuk-!-margin-bottom-6">Is the customer calling about their own claim?</h2>
-
+                Check Searchlight to confirm information.</a>
+            </li>
+    
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="govuk-body govuk-!-font-size-48">Claimant Confirmation
+</p>
+    <h1 class="govuk-heading-xl">Is the customer calling about their own claim?</h1>
 
     <form class="form" action="/customer-answer1_2" method="post">
 
@@ -84,7 +100,6 @@
                       ]
                     }) }}
                     </div>
-                    
                     <div class="govuk-button-group">
                       <button class="govuk-button govuk-!govuk-\!-margin-top-6" data-module="govuk-button">
                         Confirm and continue
@@ -93,6 +108,7 @@
                         Cancel
                       </button>
                     </div>
+                          
                           </form>
                                
 

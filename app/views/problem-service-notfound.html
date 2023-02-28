@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css" />
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Sorry, page not found</h1>
+        <div class="govuk-width-container">
+         
+                <p class="govuk-body">Try again later.</p>
+                <p class="govuk-body">If you typed the web address, check it is correct.
+
+                  If you pasted the web address, check you copied the entire address.
+                  
+                  </p>
+                <p class="govuk-body">
+                  <a class="govuk-link" href="#">Contact the ID&T Helpline</a> if you need to make changes to your claim or speak to someone about your benefit or claim.
+                </p>
+              </div>
+            </div>
+          </main>
+        </div>
+                  
+
+
+        
+
+
+
+{% endblock %}

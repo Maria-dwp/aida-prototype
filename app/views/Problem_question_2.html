@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<link href="https://design-patterns.service.justice.gov.uk/assets/stylesheets/application.css"media="all" rel="stylesheet" type="text/css"/>
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+    <div class="dwp-key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dd class="dwp-key-details-bar__name"> Jane Doe</dd>
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+        <dt class="govuk-visually-hidden">Unacceptable behaviour:</dt>
+        <dd class="dwp-key-details-bar__status_nc">IDENTITY VERIFICATION STATUS: No confidence</dd>
+        <dt class="govuk-visually-hidden"> ID&amp;V Status:Low confidence:</dt>
+
+    </div>
+    <div class="dwp-key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+
+        <dt>Address:</dt>
+        <dd>14 Street address</dd>
+        <dt>Postcode:</dt>
+        <dd>L14 5GE</dd>
+        <dt>Mobile:</dt>
+        <dd>07771 900 900</dd>
+
+    </div>
+</dl>
+</section>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="gem-c-error-summary govuk-error-summary" data-module="govuk-error-summary" id="error-summary">
+        <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+          <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                  <li class="gem-c-error-summary__list-item">
+                      <a href="#response-0">Select yes if the caller answered the question correctly</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      </div>
+      
+      <h1 class="govuk-body govuk-!-font-size-48">JSAPS</h1>
+      <h2 class="govuk-heading-xl">Ask a different question<br> from JSAPS </h2>
+
+     
+      <form class="form" action="/customer-answer1" method="post">
+        <div class="govuk-form-group"> <fieldset class="govuk-fieldset">
+          <div class="govuk-form-group govuk-form-group--error govuk-!-margin-bottom-6">
+            <fieldset class="govuk-fieldset" aria-describedby="error-991c45b4">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  
+                  <h3 class="govuk-fieldset__heading gem-c-radio__heading-text"> Did the customer answer the question correctly?</h3>
+          </legend>
+          
+                <p id="error-991c45b4" class="gem-c-error-message govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select yes if the caller answered the question correctly
+          </p>
+           
+          
+            <div class="govuk-radios" data-module="govuk-radios">
+              
+                
+                    
+                  
+                  
+                  
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="customer_answer1_2" name="customer_answer1_2" type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="customer_answer1_2">
+                  Yes
+                </label>
+                    
+                  </div>
+                  
+                  
+                
+              
+                
+                  
+                  
+                  
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="customer_answer1_2-2" name="customer_answer1_2" type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="customer_answer1_2-2">
+                  No
+                </label>
+                    
+                  </div>
+                  
+                  
+                
+              
+            </div>
+            
+          
+          </fieldset>
+          
+          
+          </div>
+                
+                                    <button class="govuk-button  govuk-!-margin-top-8" data-module="govuk-button"> Confirm and continue </button>
+                                    
+                                    </fieldset></div>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h1 class="govuk-heading-m">Action history</h1>
+      <span class="govuk-caption-m">Recorded by <br> Automated Telephony</span>
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        <div class="moj-timeline">
+  <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Searchlight</h2>
+    </div>
+
+
+
+    <div class="moj-timeline__description">
+  <p>cis_partners_nino</p>
+  <span class="moj-badge moj-badge--red">UnSuccessful</span>
+    
+
+</div>
+
+  </div>
+  <div class="moj-timeline__item">
+       <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">JSAPS</h2>
+
+    </div>
+
+
+    <div class="moj-timeline__description">
+  <p>esa_pay_day</p>
+  <span class="moj-badge moj-badge--red">UnSuccessful</span>
+</div>
+
+
+
+
+{% endblock %}
